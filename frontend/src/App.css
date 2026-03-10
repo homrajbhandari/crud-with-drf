@@ -45,38 +45,56 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* frontend/src/App.css - Enhanced edit mode styling */
+
 .grocery-input {
   flex: 1;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;  /* Slightly larger padding */
   font-size: 1rem;
-  border: 1px solid #bcccdc;
-  border-radius: 0.25rem;
-  background: #f1f5f8;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #0f172a;  /* Very dark slate color */
+  font-weight: 500;  /* Slightly bolder text */
+  transition: all 0.2s ease;
 }
 
-.grocery-input:focus {
-  outline: none;
-  border-color: #49a6e9;
-  box-shadow: 0 0 0 2px rgba(73, 166, 233, 0.5);
+/* Edit mode specific styling */
+.grocery-input.edit-mode {
+  border-color: #059669;
+  border-width: 3px;
+  background: #f0fdf4;  /* Very light green background */
+  color: #065f46;  /* Dark green text */
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
 }
 
+/* Submit button styling when in edit mode */
 .submit-btn {
   padding: 0.5rem 1.5rem;
   background: #49a6e9;
   color: #fff;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: capitalize;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .submit-btn:hover {
   background: #063251;
 }
 
+/* When in edit mode, change button color */
+.submit-btn.edit-mode {
+  background: #059669;
+}
+
+.submit-btn.edit-mode:hover {
+  background: #065f46;
+}
 .grocery-list {
   margin-bottom: 2rem;
 }
@@ -128,24 +146,47 @@ h1 {
   text-transform: capitalize;
 }
 
+/* Gradient version for more visual appeal */
 .edit-btn {
-  background: #6be675;
-  color: #0a4d0e;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .edit-btn:hover {
-  background: #0a4d0e;
-  color: #fff;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .delete-btn {
-  background: #f28b82;
-  color: #69140e;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .delete-btn:hover {
-  background: #69140e;
-  color: #fff;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .clear-btn {
